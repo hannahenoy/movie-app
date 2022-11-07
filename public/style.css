@@ -1,0 +1,189 @@
+body {
+  font-family: Noto Sans Mono, Helvetica, sans-serif;
+  background: rgb(50, 69, 145)
+}
+
+
+/****** index.ejs - homepage ******/
+
+#box {
+  width: 450px;
+  height: 250px;
+  box-shadow: 15px 15px black;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 15px auto;
+  margin-top: 200px;
+  text-align: center;
+}
+/* h1 "Movie Watchlist" title */
+.homepage {
+  font-family: Noto Sans Mono, Helvetica, sans-serif;
+}
+/* login and sign up buttons */
+.btn-default {
+  width: 150px;
+  font-weight: 400;
+  font-family: Noto Sans Mono, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-top: 2%;
+  box-shadow: 4px 4px black;
+  border: 1px solid rgb(100, 18, 120);
+  background: lightcyan;
+  border-radius: 100px;
+}
+
+
+/****** profile.ejs  ******/
+
+/* email + logout */
+header {
+  margin-bottom: 20px;
+  color: rgb(236, 124, 67);
+}
+/*** entire movies of 2022 section on left ***/
+.left {
+  width: 62%;
+  height: 600px;
+  float: left;
+  box-shadow: 15px 15px black;
+  overflow: scroll;
+  /* padding: 10px; */
+  border-radius: 20px;
+  background-color: white;
+}
+/* movies of 2022 title */
+.h1 {
+  float: left;
+  padding-left: 45px;
+  font-family: Noto Sans Mono, Helvetica, sans-serif;
+  font-size: 30px;
+  padding-bottom: 15px;
+  color: white;
+}
+/* new movies list */
+ul {
+  list-style: none;
+  display: grid;
+  padding-top: 2%;
+  margin: 2px auto;
+  grid-template-columns: repeat(4, 25%);
+}
+/* new movie images */
+img {
+  width: 60%;
+  margin-bottom: 9px;
+}
+
+/*** saved watchlist section on right ***/
+.right {
+  float: right;
+  width: 30%;
+  height: 600px;
+  text-align: center;
+  box-shadow: 8px 8px white;
+  overflow: scroll;
+  border-radius: 20px;
+  background-color: rgb(236, 124, 67);
+  color: white;
+}
+/* watchlist title */
+.h2 {
+  display: flex;
+  justify-content: center;
+  padding-left: 105px;
+  font-family: Noto Sans Mono, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+/* saved watchlist movies */
+ol {
+  text-decoration: none;
+  padding-top: 22px;
+}
+
+/* saved movie images */
+ol img {
+  width: 50%;
+}
+
+.fa-trash:hover {
+  color: orangered;
+}
+
+.fa-trash {
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: rgb(246, 211, 130);
+}
+/* + button for adding movies to watchlist*/
+.save {
+  font-size: 10px;
+  margin-left: 7px;
+  height: 18px;
+  width: 256x;
+  border-radius: 25px;
+  border: 1px solid gray;
+  margin-bottom: 15px;
+  margin-top: 10px;
+
+}
+
+/* hover movie descriptions */
+
+/* Tooltip container */
+/* .tooltip {
+  position: relative;
+  display: block;
+} */
+
+/* Tooltip text */
+/* .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px; */
+ 
+  /* Position the tooltip text - see examples below! */
+  /* top: -5px;
+  left: 105%;
+} */
+
+/* Show the tooltip text when you mouse over the tooltip container */
+/* .tooltip:hover .tooltiptext {
+  visibility: visible;
+} */
+
+
+
+[data-tooltip]:before {
+  /* needed - do not touch */
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+  
+  /* customizable */
+  transition: all 0.15s ease;
+  padding: 10px;
+  width: 200px;
+  font-size: 11px;
+  color: rgb(236, 124, 67);
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px silver;    
+}
+
+[data-tooltip]:hover:before {
+  /* needed - do not touch */
+  opacity: 1;
+  
+  /* customizable */
+  background: rgb(67, 66, 66);
+  margin-top: -100px;
+  margin-left: 10px;    
+}
